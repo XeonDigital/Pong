@@ -11,7 +11,7 @@ set /p "set=What do you want to do(input the corrisponding number)?"
 if %set%== 2 (goto commit)
 if %set%== 1 (goto init)
 if %set%== 4 (goto fetch)
-if %set%== 3 (goto commit -f)
+if %set%== 3 (goto commit-f)
 pause
 goto end
 
@@ -35,7 +35,7 @@ echo finished setup
 pause
 goto end
 
-:commit -f
+:commit-f
 cls
 set /p "reason=Enter your reason for this commit:"
 git add .
