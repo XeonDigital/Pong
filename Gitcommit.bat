@@ -1,15 +1,17 @@
 @ECHO OFF
 :start
 cls
-echo ------------
+echo ----------------------
 echo  init   1
 echo  commit 2 
-echo  update 3 
-echo ------------
+echo  force commit 3
+echo  update repository 4
+echo ----------------------
 set /p "set=What do you want to do(input the corrisponding number)?"
 if %set%== 2 (goto commit)
 if %set%== 1 (goto init)
-if %set%== 3 (goto fetch)
+if %set%== 4 (goto fetch)
+if %set%== 3 (goto commit -f)
 pause
 goto end
 
@@ -28,8 +30,17 @@ git init
 git remote add origin %origin%
 git add .
 git commit -m "first commit"
-git push -u origin master
+git push origin master
 echo finished setup
+pause
+goto end
+
+:commit -f
+cls
+set /p "reason=Enter your reason for this commit:"
+git add .
+git commit -m "%reason%"
+git push origin master
 pause
 goto end
 
