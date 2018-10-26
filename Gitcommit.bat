@@ -40,7 +40,7 @@ cls
 set /p "reason=Enter your reason for this commit:"
 git add .
 git commit -m "%reason%"
-git push origin master
+git push -f origin master
 pause
 goto end
 
