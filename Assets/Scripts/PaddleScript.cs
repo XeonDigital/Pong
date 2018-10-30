@@ -14,6 +14,7 @@ public class PaddleScript : MonoBehaviour {
 	public Rigidbody2D rBody;
 	public float speed;
 	public Boundary boundary;
+	public string input;
 	// Use this for initialization
 	void Start () {
 		//takes the component 
@@ -22,12 +23,13 @@ public class PaddleScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-}
+
+	}
 
 	void FixedUpdate()
 	{
 		//takes the input of the pressed key (1 = up/right -1 = down/left)
-		float vert = Input.GetAxis("Vertical");
+		float vert = Input.GetAxis(input);
 		//used for debugging
 		Debug.Log("x: " + vert);
 		//creates a 2d vector 
