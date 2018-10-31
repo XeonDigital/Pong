@@ -30,8 +30,6 @@ public class PaddleScript : MonoBehaviour {
 	{
 		//takes the input of the pressed key (1 = up/right -1 = down/left)
 		float vert = Input.GetAxis(input);
-		//used for debugging
-		Debug.Log("x: " + vert);
 		//creates a 2d vector 
 		Vector2 movement = new Vector2(0,vert);
 		//moves the player
