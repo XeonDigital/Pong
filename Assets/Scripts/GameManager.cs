@@ -1,16 +1,32 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-	GameObject theBall;
+	public GameObject ball;
+	public int playerOneScore;
+	public int playerTwoScore;
 	// Use this for initialization
-	void Start () {
-		theBall = GameObject.FindGameObjectWithTag("Ball");
+	void Start() {
+		ball = GameObject.FindGameObjectWithTag("Ball");
+		playerOneScore = 0;
+		playerTwoScore = 0;
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
-		
+	void Update() {
+
 	}
+	public void RightWallHit()
+	{
+		Debug.Log("right wall hit");
+		playerOneScore++;
+	}
+	public void LeftWallHit()
+	{
+		Debug.Log("left wall hit");
+		playerOneScore++;
+	}
+
 }

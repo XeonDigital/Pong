@@ -2,11 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour {
-
+public class BorderScript : MonoBehaviour {
+	public GameManager gameManager;
 	// Use this for initialization
-	void OnTriggerExit2D(Collider2D other)
+	void OnCollisionEnter2D(Collision2D other)
 	{
-		//other.
+		Debug.Log("Wall Name: " + this.gameObject.name);
+		if (other.collider.CompareTag("Ball"))
+		{
+			if(this.gameObject.name == "RightWall")
+			{
+				other.gameObject.SendMessage("")
+			}
+			if(this.gameObject.name == "LeftWall")
+			{
+				this.GetComponent<GameManager>().LeftWallHit();
+			}
+		}
 	}
 }

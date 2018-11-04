@@ -612,6 +612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1421406798}
   - component: {fileID: 1421406797}
+  - component: {fileID: 1421406799}
   m_Layer: 0
   m_Name: RightWall
   m_TagString: Untagged
@@ -657,6 +658,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1421406799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1421406796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c1a0dd08d7717438160c707f0e34f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
 --- !u!1 &1456932860
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,7 +684,7 @@ GameObject:
   - component: {fileID: 1456932864}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -846,6 +859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2106936483}
   - component: {fileID: 2106936482}
+  - component: {fileID: 2106936484}
   m_Layer: 0
   m_Name: LeftWall
   m_TagString: Untagged
@@ -891,3 +905,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2106936484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2106936481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c1a0dd08d7717438160c707f0e34f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}

@@ -41,8 +41,4 @@ public class BallScript : MonoBehaviour {
 		rbody.velocity = Vector2.zero;
 		rbody.position = Vector2.zero;
 	}
-	void Score()
-	{
-		
-	}
 }
