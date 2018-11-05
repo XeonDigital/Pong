@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour {
 	public GameObject ball;
 	public static int playerOneScore;
 	public static int playerTwoScore;
+	public GUISkin layout;
 	// Use this for initialization
 	void Start() {
 		ball = GameObject.FindGameObjectWithTag("Ball");
@@ -35,6 +36,18 @@ public class GameManager : MonoBehaviour {
 	}
 	private void OnGUI()
 	{
-		
+		GUI.skin = layout;
+		Debug.Log("screenwidth" + Screen.width / 2);
+		GUI.Label(new Rect(10, 50, 100, 100),"" + playerOneScore);
+		GUI.Label(new Rect(Screen.width - 25, 50, 100, 100), "" + playerTwoScore);
+		if(playerOneScore == 1)
+		{
+			GUI.Label(new Rect(Screen.width / 2, 125, 100, 100), "Player One Wins!!!!!");
+			Invoke
+		}
+		if(playerTwoScore == 10)
+		{
+			GUI.Label(new Rect(Screen.width / 2, 150, 100, 100), "Player Two Wins!!!!!");
+		}
 	}
 }
