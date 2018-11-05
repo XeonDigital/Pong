@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class BorderScript : MonoBehaviour {
 	// Use this for initialization
-	void OnCollisionEnter2D(Collision2D other)
+	void OnTriggerEnter2D(Collider2D other)
 	{
-		Debug.Log("Wall Name: " + this.gameObject.name);
-		if (other.collider.CompareTag("Ball"))
+		Debug.Log("asd");
+		if (other.CompareTag("Ball"))
 		{
 			name = this.gameObject.name;
 			GameManager.Score(name);
+			other.SendMessage("RestartGame", null);
 		}
 	}
 }

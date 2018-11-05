@@ -26,28 +26,38 @@ public class GameManager : MonoBehaviour {
 		if(wall == "LeftWall")
 		{
 			playerOneScore++;
-			Debug.Log("Player 1:" + playerOneScore);
 		}
 		if(wall == "RightWall")
 		{
 			playerTwoScore++;
-			Debug.Log("player 2: " + playerTwoScore);
 		}
 	}
 	private void OnGUI()
 	{
 		GUI.skin = layout;
-		Debug.Log("screenwidth" + Screen.width / 2);
 		GUI.Label(new Rect(10, 50, 100, 100),"" + playerOneScore);
 		GUI.Label(new Rect(Screen.width - 25, 50, 100, 100), "" + playerTwoScore);
-		if(playerOneScore == 1)
+		if(playerOneScore == 5)
 		{
-			GUI.Label(new Rect(Screen.width / 2, 125, 100, 100), "Player One Wins!!!!!");
-			Invoke
+			GUI.Label(new Rect(Screen.width / 2, 300, 100, 100), "Player One Wins!!!!!");
+			ball.SendMessage("RestartGame", null);
+			playerOneScore = 0;
+			playerTwoScore = 0;
 		}
-		if(playerTwoScore == 10)
+		if(playerTwoScore == 5)
 		{
-			GUI.Label(new Rect(Screen.width / 2, 150, 100, 100), "Player Two Wins!!!!!");
+			GUI.Label(new Rect(Screen.width / 2, 50, 100, 100), "Player Two Wins!!!!!");
+			ball.SendMessage("RestartGame", null);
+			playerOneScore = 0;
+			playerTwoScore = 0;
+		}
+		if(playerOneScore == 5)
+		{
+			
+		}
+		if(playerTwoScore == 5)
+		{
+			
 		}
 	}
 }

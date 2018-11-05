@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 12001, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: ScoreSkin
   m_EditorClassIdentifier: 
-  m_Font: {fileID: 12800000, guid: 52b196c8f5b8a2e45ba6da74e01940bd, type: 3}
+  m_Font: {fileID: 12800000, guid: 22047cc283f41074091be33624130b27, type: 3}
   m_box:
     m_Name: box
     m_Normal:
@@ -66,8 +66,8 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Font: {fileID: 0}
-    m_FontSize: 0
+    m_Font: {fileID: 12800000, guid: 22047cc283f41074091be33624130b27, type: 3}
+    m_FontSize: 46
     m_FontStyle: 0
     m_Alignment: 1
     m_WordWrap: 0

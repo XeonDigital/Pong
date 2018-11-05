@@ -30,7 +30,6 @@ public class BallScript : MonoBehaviour {
 	{
 		if (other.collider.CompareTag("Player"))
 		{
-			Debug.Log("collided with player");
 			movement.x = rbody.velocity.x;
 			movement.y = (rbody.velocity.y / 2) + (other.collider.attachedRigidbody.velocity.y / 3);
 			rbody.velocity = movement;
@@ -40,5 +39,10 @@ public class BallScript : MonoBehaviour {
 	{
 		rbody.velocity = Vector2.zero;
 		rbody.position = Vector2.zero;
+	}
+	void RestartGame()
+	{
+		ResetBall();
+		Invoke("BallStart", 2);
 	}
 }
