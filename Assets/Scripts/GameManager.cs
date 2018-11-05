@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 	public GameObject ball;
-	public int playerOneScore;
-	public int playerTwoScore;
+	public static int playerOneScore;
+	public static int playerTwoScore;
 	// Use this for initialization
 	void Start() {
 		ball = GameObject.FindGameObjectWithTag("Ball");
@@ -18,15 +18,23 @@ public class GameManager : MonoBehaviour {
 	void Update() {
 
 	}
-	public void RightWallHit()
+	
+	public static void Score(string wall)
 	{
-		Debug.Log("right wall hit");
-		playerOneScore++;
+		Debug.Log("Wallside: " + wall);
+		if(wall == "LeftWall")
+		{
+			playerOneScore++;
+			Debug.Log("Player 1:" + playerOneScore);
+		}
+		if(wall == "RightWall")
+		{
+			playerTwoScore++;
+			Debug.Log("player 2: " + playerTwoScore);
+		}
 	}
-	public void LeftWallHit()
+	private void OnGUI()
 	{
-		Debug.Log("left wall hit");
-		playerOneScore++;
+		
 	}
-
 }
